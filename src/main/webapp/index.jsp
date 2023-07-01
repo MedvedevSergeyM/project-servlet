@@ -4,13 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Крестики-нолики</title>
+    <title>TIC-TAC-TOE</title>
     <link href="static/main.css" rel="stylesheet">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <script src="<c:url value="/static/jquery-3.6.0.min.js"/>"></script>
 </head>
 <body>
-    <h1>Крестики-нолики</h1>
+    <h1>TIC-TAC-TOE</h1>
 
     <script>
         function restart() {
@@ -49,17 +49,17 @@
     <c:set var="NOUGHTS" value="<%=Sign.NOUGHT%>"/>
 
     <c:if test="${winner == CROSSES}">
-        <h1>Вы играли крестиками и выиграли! Очень странно, как это вам удалось выиграть у сервера...</h1>
-        <button onclick="restart()">Играем еще раз?</button>
+        <h1>CROSSES WIN!</h1>
+        <button onclick="restart()">Start again</button>
     </c:if>
     <c:if test="${winner == NOUGHTS}">
-        <h1>Сервер играл ноликами и выиграл! Веротно вы поддавались?</h1>
-        <button onclick="restart()">Играем еще раз?</button>
+        <h1>NOUGHTS WIN!</h1>
+        <button onclick="restart()">Start again</button>
     </c:if>
     <c:if test="${draw}">
-        <h1>Ничья, стандартный результат для этой игры...</h1>
+        <h1>IT'S A DRAW</h1>
         <br>
-        <button onclick="restart()">Играем еще раз?</button>
+        <button onclick="restart()">Start again</button>
     </c:if>
 
 </body>

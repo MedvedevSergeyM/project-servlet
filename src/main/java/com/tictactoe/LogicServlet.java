@@ -25,10 +25,10 @@ public class LogicServlet extends HttpServlet {
         int index = getSelectedIndex(req);
         Sign currentSign = field.getField().get(index);
 
-        // Проверяем, что ячейка, по которой был клик пустая.
+        // Проверяем, что ячейка, по которой был клик пустая и игра еще не завершена.
         // Иначе ничего не делаем и отправляем пользователя на ту же страницу без изменений
         // параметров в сессии
-        if (Sign.EMPTY != currentSign) {
+        if (Sign.EMPTY != currentSign || currentSession.getAttribute("winner") != null) {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
             dispatcher.forward(req, resp);
             return;

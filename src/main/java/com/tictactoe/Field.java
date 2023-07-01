@@ -202,6 +202,18 @@ public class Field {
         }
 
         // Хм... займем еще один угол, если есть
+        if (field.get(0) == Sign.EMPTY && field.get(1) == Sign.CROSS && field.get(3) == Sign.CROSS) {
+            return 0;
+        }
+        if (field.get(2) == Sign.EMPTY && field.get(1) == Sign.CROSS && field.get(5) == Sign.CROSS) {
+            return 2;
+        }
+        if (field.get(6) == Sign.EMPTY && field.get(3) == Sign.CROSS && field.get(7) == Sign.CROSS) {
+            return 6;
+        }
+        if (field.get(8) == Sign.EMPTY && field.get(5) == Sign.CROSS && field.get(7) == Sign.CROSS) {
+            return 8;
+        }
         if (field.get(2) == Sign.NOUGHT && field.get(0) == Sign.EMPTY) {
             return 0;
         }
