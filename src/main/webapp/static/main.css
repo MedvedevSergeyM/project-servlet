@@ -1,0 +1,24 @@
+td {
+    border: 3px solid black;
+    padding: 10px;
+    border-collapse: separate;
+    width: 100px;
+    height: 100px;
+    font-size: 80px;
+    text-align: center;
+    empty-cells: show;
+}
+
+div.signX {
+    background-image: url("cross.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%
+}
+
+div.sign0 {
+    background-image: url("nought.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%
+}
